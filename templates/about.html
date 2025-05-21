@@ -1,0 +1,127 @@
+{% extends 'base.html' %}
+
+{% block title %}PLCC | About Us{% endblock %}
+
+{% block content %}
+  <!-- About Hero Section -->
+  <section class="page-hero about-hero">
+    <div class="container">
+      <h1>About PLCC</h1>
+      <p>Learn more about Pia Lokkevik and her revolutionary approach to IGCSE tutoring</p>
+    </div>
+  </section>
+
+  <!-- Pia's Story -->
+  <section class="about-section">
+    <div class="container">
+      <div class="about-content">
+        <div class="about-image">
+          <img src="https://drive.google.com/uc?export=view&id=1rdDecfVSszjA73jV3ZT9LUWu3lJQVI3L" alt="Pia Lokkevik" />
+        </div>
+        <div class="about-text">
+          <h2>Meet Pia Lokkevik</h2>
+          <p>With over 10 years of experience teaching IGCSE subjects, Pia has developed a unique methodology that helps students grasp difficult concepts quickly and effectively.</p>
+          <p>After working with hundreds of students and seeing the same struggles again and again, Pia created PLCC to provide targeted support for exam preparation. Her approach combines personalized attention with structured study methods that have proven successful across all 15 IGCSE subjects.</p>
+          <p>Pia's students consistently improve their grades by at least two levels, often going from failing to achieving A* grades in just a few months.</p>
+
+          <div class="about-qualifications">
+            <h3>Qualifications</h3>
+            <ul>
+              <li>Master's in Education, University of Cambridge</li>
+              <li>Certified IGCSE Examiner in Mathematics and Physics</li>
+              <li>Educational Psychology certification</li>
+              <li>10+ years of classroom and private tutoring experience</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Our Approach -->
+  <section class="approach-section">
+    <div class="container">
+      <h2>The PLCC Approach</h2>
+      <div class="approach-grid">
+        <div class="approach-card">
+          <i class="fas fa-user"></i>
+          <h3>Personalized Learning</h3>
+          <p>We recognize that every student has unique needs and learning styles. Our one-on-one sessions are tailored to address your specific challenges.</p>
+        </div>
+        <div class="approach-card">
+          <i class="fas fa-book-open"></i>
+          <h3>Exam-Focused Content</h3>
+          <p>Our materials and teaching methods are designed with the IGCSE exam structure in mind, focusing on the key concepts most likely to appear.</p>
+        </div>
+        <div class="approach-card">
+          <i class="fas fa-brain"></i>
+          <h3>Memory Techniques</h3>
+          <p>We teach specialized memory methods that help students retain information for longer periods, reducing test anxiety.</p>
+        </div>
+        <div class="approach-card">
+          <i class="fas fa-clock"></i>
+          <h3>Time Management</h3>
+          <p>Our students learn efficient study habits and exam time management skills that help them maximize their performance.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Subjects We Cover -->
+  <section class="subjects-section">
+    <div class="container">
+      <h2>IGCSE Subjects We Cover</h2>
+      <div class="subjects-full-grid">
+        {% for subject in subjects %}
+        <div class="subject-item">
+          <i class="fas fa-{{ subject.icon }}"></i>
+          <h3>{{ subject.name }}</h3>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+
+  <!-- Success Stories -->
+  <section class="success-stories">
+    <div class="container">
+      <h2>Success Stories</h2>
+      <div class="story-cards">
+        <div class="story-card">
+          <div class="grade-improvement">
+            <span class="before">D-</span>
+            <i class="fas fa-arrow-right"></i>
+            <span class="after">A*</span>
+          </div>
+          <p class="story-text">"I was failing Physics and was ready to drop it. After 5 sessions with Pia, I not only passed but got the highest grade in my class!"</p>
+          <p class="student-name">- James Wilson, Year 11</p>
+        </div>
+        <div class="story-card">
+          <div class="grade-improvement">
+            <span class="before">C</span>
+            <i class="fas fa-arrow-right"></i>
+            <span class="after">A</span>
+          </div>
+          <p class="story-text">"Maths was always my biggest challenge. Pia taught me how to approach problems systematically, which changed everything for me."</p>
+          <p class="student-name">- Aisha Patel, Year 10</p>
+        </div>
+        <div class="story-card">
+          <div class="grade-improvement">
+            <span class="before">E</span>
+            <i class="fas fa-arrow-right"></i>
+            <span class="after">B+</span>
+          </div>
+          <p class="story-text">"I joined PLCC just 2 weeks before my Chemistry exam. The last-minute strategies Pia taught me helped me pass with a grade I never thought possible."</p>
+          <p class="student-name">- Lucas Rodriguez, Year 9</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="cta-section">
+    <h2>Ready to Experience the PLCC Difference?</h2>
+    <p>Join hundreds of students who have transformed their academic performance with our tutoring.</p>
+    <a class="cta-btn large" href="{{ url_for('payment') }}">Start Your Journey</a>
+  </section>
+{% endblock %}
