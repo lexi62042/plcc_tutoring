@@ -81,4 +81,3 @@
   {% block extra_scripts %}{% endblock %}
 </body>
 </html>
-add app.py
