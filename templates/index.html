@@ -1,0 +1,98 @@
+{% extends 'base.html' %}
+
+{% block title %}PLCC | Pia Lokkevik Crash Courses - Home{% endblock %}
+
+{% block content %}
+  <!-- Hero / Main Section -->
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Turn Your Grades Around with PLCC</h1>
+      <ul>
+        <li>One-on-one tutoring sessions with Pia herself</li>
+        <li>Access to Pia's exclusive notes & study method</li>
+        <li>Supportive, exam-focused community</li>
+        <li>15 IGCSE subjects covered</li>
+        <li>Last-minute success strategies (yes, even if your exam's today!)</li>
+      </ul>
+      <a class="cta-btn" href="{{ url_for('payment') }}">Join today →</a>
+    </div>
+    <div class="hero-img">
+      <img src="https://drive.google.com/uc?export=view&id=1rdDecfVSszjA73jV3ZT9LUWu3lJQVI3L" alt="Student Studying" width="500" />
+    </div>
+  </section>
+
+  <!-- Featured Subjects -->
+  <section class="featured-subjects">
+    <h2>IGCSE Subjects We Cover</h2>
+    <div class="subjects-grid">
+      {% for subject in featured_subjects %}
+      <div class="subject-card">
+        <i class="fas fa-{{ subject.icon }}"></i>
+        <h3>{{ subject.name }}</h3>
+        <p>{{ subject.description }}</p>
+      </div>
+      {% endfor %}
+    </div>
+    <div class="view-more">
+      <a href="{{ url_for('about') }}">View all 15 subjects →</a>
+    </div>
+  </section>
+
+  <!-- How It Works -->
+  <section class="how-it-works">
+    <h2>How PLCC Works</h2>
+    <div class="steps">
+      <div class="step">
+        <div class="step-number">1</div>
+        <h3>Choose Your Plan</h3>
+        <p>Select from our flexible tutoring plans based on your needs</p>
+      </div>
+      <div class="step">
+        <div class="step-number">2</div>
+        <h3>Book Your Sessions</h3>
+        <p>Schedule one-on-one tutoring with Pia at your convenience</p>
+      </div>
+      <div class="step">
+        <div class="step-number">3</div>
+        <h3>Access Materials</h3>
+        <p>Get exclusive notes, practice questions, and study guides</p>
+      </div>
+      <div class="step">
+        <div class="step-number">4</div>
+        <h3>Ace Your Exams</h3>
+        <p>Watch your grades improve with our proven methods</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="testimonials">
+    <h2>What Our Students Say</h2>
+    <div class="testimonial-slider">
+      <div class="testimonial">
+        "Thanks to PLCC, I jumped from a D- to an A* in Physics! The one-on-one help with Pia made all the difference."<br>
+        — Layla Proudfoot, Year 10
+      </div>
+      <div class="testimonial">
+        "I was struggling with Math for years, but after just 3 sessions with Pia, I finally understood the core concepts. Got a B+ on my final exam!"<br>
+        — Marcus Chen, Year 11
+      </div>
+      <div class="testimonial">
+        "Pia's study method is revolutionary. I learned how to study effectively and now I apply her techniques to all my subjects."<br>
+        — Sofia Gonzalez, Year 9
+      </div>
+    </div>
+    <div class="testimonial-nav">
+      <span class="testimonial-dot active"></span>
+      <span class="testimonial-dot"></span>
+      <span class="testimonial-dot"></span>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="cta-section">
+    <h2>Ready to Transform Your Academic Journey?</h2>
+    <p>Join PLCC today and experience the difference personalized tutoring can make.</p>
+    <a class="cta-btn large" href="{{ url_for('payment') }}">Get Started Now</a>
+  </section>
+{% endblock %}
