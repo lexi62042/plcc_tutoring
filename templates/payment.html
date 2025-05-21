@@ -1,0 +1,250 @@
+{% extends 'base.html' %}
+
+{% block title %}PLCC | Payment Plans{% endblock %}
+
+{% block content %}
+  <!-- Payment Plans Hero Section -->
+  <section class="page-hero payment-hero">
+    <div class="container">
+      <h1>Tutoring Plans & Pricing</h1>
+      <p>Choose the plan that best fits your academic needs and goals</p>
+    </div>
+  </section>
+
+  <!-- Plan Selection -->
+  <section class="pricing-plans">
+    <div class="container">
+      <div class="plan-cards">
+        <!-- Basic Plan -->
+        <div class="plan-card">
+          <div class="plan-header">
+            <h2>Basic Plan</h2>
+            <div class="plan-price">
+              <span class="currency">€</span>
+              <span class="amount">149</span>
+              <span class="period">/month</span>
+            </div>
+          </div>
+          <div class="plan-features">
+            <ul>
+              <li><i class="fas fa-check"></i> 2 one-hour tutoring sessions per month</li>
+              <li><i class="fas fa-check"></i> Access to basic study materials</li>
+              <li><i class="fas fa-check"></i> Email support within 48 hours</li>
+              <li><i class="fas fa-check"></i> Coverage for 1 subject</li>
+              <li><i class="fas fa-times"></i> Exam preparation guides</li>
+              <li><i class="fas fa-times"></i> Practice tests and solutions</li>
+              <li><i class="fas fa-times"></i> Priority scheduling</li>
+            </ul>
+          </div>
+          <div class="plan-footer">
+            <a href="#contact-form" class="plan-cta">Select Plan</a>
+          </div>
+        </div>
+
+        <!-- Standard Plan -->
+        <div class="plan-card featured">
+          <div class="plan-tag">Most Popular</div>
+          <div class="plan-header">
+            <h2>Standard Plan</h2>
+            <div class="plan-price">
+              <span class="currency">€</span>
+              <span class="amount">249</span>
+              <span class="period">/month</span>
+            </div>
+          </div>
+          <div class="plan-features">
+            <ul>
+              <li><i class="fas fa-check"></i> 4 one-hour tutoring sessions per month</li>
+              <li><i class="fas fa-check"></i> Access to comprehensive study materials</li>
+              <li><i class="fas fa-check"></i> Email support within 24 hours</li>
+              <li><i class="fas fa-check"></i> Coverage for 2 subjects</li>
+              <li><i class="fas fa-check"></i> Exam preparation guides</li>
+              <li><i class="fas fa-check"></i> Practice tests and solutions</li>
+              <li><i class="fas fa-times"></i> Priority scheduling</li>
+            </ul>
+          </div>
+          <div class="plan-footer">
+            <a href="#contact-form" class="plan-cta">Select Plan</a>
+          </div>
+        </div>
+
+        <!-- Premium Plan -->
+        <div class="plan-card">
+          <div class="plan-header">
+            <h2>Premium Plan</h2>
+            <div class="plan-price">
+              <span class="currency">€</span>
+              <span class="amount">399</span>
+              <span class="period">/month</span>
+            </div>
+          </div>
+          <div class="plan-features">
+            <ul>
+              <li><i class="fas fa-check"></i> 8 one-hour tutoring sessions per month</li>
+              <li><i class="fas fa-check"></i> Access to all study materials</li>
+              <li><i class="fas fa-check"></i> Email & WhatsApp support within 12 hours</li>
+              <li><i class="fas fa-check"></i> Coverage for up to 4 subjects</li>
+              <li><i class="fas fa-check"></i> Comprehensive exam preparation guides</li>
+              <li><i class="fas fa-check"></i> Advanced practice tests and solutions</li>
+              <li><i class="fas fa-check"></i> Priority scheduling</li>
+            </ul>
+          </div>
+          <div class="plan-footer">
+            <a href="#contact-form" class="plan-cta">Select Plan</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Special Packages -->
+  <section class="special-packages">
+    <div class="container">
+      <h2>Special Packages</h2>
+      <div class="packages-grid">
+        <div class="package-card">
+          <div class="package-icon">
+            <i class="fas fa-rocket"></i>
+          </div>
+          <h3>Exam Booster</h3>
+          <p class="package-description">Intensive tutoring program focused on exam preparation in the weeks leading up to your IGCSE exams.</p>
+          <div class="package-price">
+            <span class="currency">€</span>
+            <span class="amount">599</span>
+          </div>
+          <ul class="package-features">
+            <li>10 focused tutoring sessions over 3 weeks</li>
+            <li>Past paper review and practice</li>
+            <li>Exam technique coaching</li>
+            <li>Last-minute memory techniques</li>
+          </ul>
+          <a href="#contact-form" class="package-cta">Get This Package</a>
+        </div>
+
+        <div class="package-card">
+          <div class="package-icon">
+            <i class="fas fa-user-friends"></i>
+          </div>
+          <h3>Group Learning</h3>
+          <p class="package-description">Learn with friends! Group sessions for 2-4 students studying the same subject.</p>
+          <div class="package-price">
+            <span class="currency">€</span>
+            <span class="amount">99</span>
+            <span class="period">/person/month</span>
+          </div>
+          <ul class="package-features">
+            <li>4 group sessions per month</li>
+            <li>Shared study materials</li>
+            <li>Collaborative learning exercises</li>
+            <li>Group problem-solving techniques</li>
+          </ul>
+          <a href="#contact-form" class="package-cta">Get This Package</a>
+        </div>
+
+        <div class="package-card">
+          <div class="package-icon">
+            <i class="fas fa-calendar-alt"></i>
+          </div>
+          <h3>Full Academic Year</h3>
+          <p class="package-description">Comprehensive support throughout the entire academic year with significant savings.</p>
+          <div class="package-price">
+            <span class="currency">€</span>
+            <span class="amount">2,499</span>
+            <span class="period">/year</span>
+          </div>
+          <ul class="package-features">
+            <li>4 sessions per month for 10 months</li>
+            <li>Coverage for 3 subjects</li>
+            <li>Regular progress assessments</li>
+            <li>Full access to all study materials</li>
+          </ul>
+          <a href="#contact-form" class="package-cta">Get This Package</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQs -->
+  <section class="payment-faqs">
+    <div class="container">
+      <h2>Frequently Asked Questions</h2>
+      <div class="faq-list">
+        <div class="faq-item">
+          <div class="faq-question">
+            <h3>How do tutoring sessions take place?</h3>
+            <i class="fas fa-chevron-down"></i>
+          </div>
+          <div class="faq-answer">
+            <p>All tutoring sessions are conducted online via Zoom or Google Meet. This allows for flexible scheduling and enables us to serve students from around the world. Screen sharing, digital whiteboards, and other collaborative tools ensure an interactive learning experience.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <h3>Can I change my plan later?</h3>
+            <i class="fas fa-chevron-down"></i>
+          </div>
+          <div class="faq-answer">
+            <p>Yes, you can upgrade or downgrade your plan at any time. Changes will take effect at the start of your next billing cycle. There are no penalties for changing plans.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <h3>What payment methods do you accept?</h3>
+            <i class="fas fa-chevron-down"></i>
+          </div>
+          <div class="faq-answer">
+            <p>We accept credit/debit cards (Visa, MasterCard, American Express), PayPal, and bank transfers. All payments are processed securely through our payment provider.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <h3>Is there a refund policy?</h3>
+            <i class="fas fa-chevron-down"></i>
+          </div>
+          <div class="faq-answer">
+            <p>We offer a 100% satisfaction guarantee. If you're not satisfied after your first tutoring session, we'll refund your payment in full. For ongoing subscriptions, you can cancel at any time, but we do not provide partial refunds for unused sessions.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <h3>How do I schedule my tutoring sessions?</h3>
+            <i class="fas fa-chevron-down"></i>
+          </div>
+          <div class="faq-answer">
+            <p>After signing up, you'll receive access to our online scheduling system where you can book sessions based on Pia's availability. The Premium Plan members receive priority access to scheduling.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Form -->
+  <section id="contact-form" class="payment-contact">
+    <div class="container">
+      <h2>Ready to Get Started?</h2>
+      <p>Fill out the form below and we'll contact you to discuss the best tutoring plan for your needs.</p>
+      
+      <form class="signup-form">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+        </div>
+        
+        <div class="form-row">
+          <div class="form-group">
+            <label for="phone">Phone Number (with country code)</label>
+            <input type="tel" id="phone" name="phone">
+          </div>
+          <div class="form-group">
+            <label for="student-year">Student's Year/Grade</label>
+            <select id="student-year" name="student-year" required>
