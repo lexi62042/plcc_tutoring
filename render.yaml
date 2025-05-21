@@ -1,3 +1,4 @@
+startCommand: gunicorn 'app_simple:app'
 services:
   - type: web
     name: plcc-tutoring
